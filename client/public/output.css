@@ -1363,13 +1363,6 @@ html {
     -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
             backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
   }
-
-  @media not all and (min-width: 1500px) {
-    .lg\:max-xl\:bg-\[\#B5CFC8\] {
-      --tw-bg-opacity: 1;
-      background-color: rgb(181 207 200 / var(--tw-bg-opacity));
-    }
-  }
 }
 
 @media (min-width: 1500px) {
