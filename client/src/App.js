@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import WelcomeBox from './components/WelcomeBox';
 import LoginBox from './components/LoginBox';
+import SignupBox from './components/SignupBox';
 
 function App() {
   // Keeping this here for now as an example of how to talk to the server
@@ -29,6 +30,10 @@ function App() {
         <Route
           path="login"
           element={<LoginBox />}
+        />
+        <Route
+          path="signup"
+          element={<SignupBox />}
         />
         <Route
           path="*"
