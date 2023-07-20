@@ -21,7 +21,13 @@ function App() {
   //     })
 
   // }, [])
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userRecipes, setUserRecipes] = useState([
+    { name: "Recipe 1" },
+    { name: "Recipe 2" },
+    { name: "Recipe 3" },
+    { name: "Recipe 4" },
+  ]);
   const navigate = useNavigate();
 
   const handleLoginSubmission = (loginData) => {
@@ -30,7 +36,7 @@ function App() {
       Object.entries(loginData).forEach(([key, value]) => {
         console.log(`${key}: ${value}`);
       });
-      setIsLoggedIn(true);
+      // setIsLoggedIn(true);
       navigate('/feed');
     } else {
       console.log("Login form submitted with invalid (missing) data.");
@@ -54,7 +60,9 @@ function App() {
         />
         <Route
           path="feed"
-          element={<FeedPage />}
+          element={<FeedPage
+            recipes={userRecipes}
+          />}
         />
         <Route
           path="*"
