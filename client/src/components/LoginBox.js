@@ -12,7 +12,7 @@ const LoginBox = () => {
               A place to find, talk about, and save the recipes you love.
             </figcaption>
             <div>
-              <a className="btn btn-outline btn-success" href="/login">
+              <a className="btn btn-outline btn-success mr-1" href="/login">
                 Login</a>
               <a className="btn btn-outline btn-success" href="/signup">
                 Signup</a>
