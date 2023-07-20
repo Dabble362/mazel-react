@@ -1,15 +1,25 @@
 const LoginBox = () => {
     return (
-        <div
-            style={{
-                border: '1px solid black',
-            }}
-        >
-            <h1>Mazel</h1>
-            <h3>A place to find, talk about, and save the recipes you love.</h3>
-            <button>Login</button>
-            <button>Signup</button>
-        </div>
+        <div className="flex">
+        <section className="xl:flex-1 sm:max-lg:hidden"></section>
+        <section className="flex flex-1 justify-center items-center h-screen">
+          <div
+            className="bg-white flex flex-col p-14 md:shadow-solid-primary md:border-2 md:border-black md:py-6 md:px-4 md:max-w-[500px]">
+            <h1 className="mt-8 mb-2 text-8xl font-bold text-dark-slate-gray lg:backdrop-blur-xs">
+              Mazel
+            </h1>
+            <figcaption className="mb-2 text-dark-slate-gray text-2xl font-semibold backdrop-blur-xs pb-8">
+              A place to find, talk about, and save the recipes you love.
+            </figcaption>
+            <div>
+              <a className="btn btn-outline btn-success lg:max-xl:bg-[#B5CFC8]" href="/login">
+                Login</a>
+              <a className="btn btn-outline btn-success lg:max-xl:bg-[#B5CFC8]" href="/signup">
+                Signup</a>
+            </div>
+          </div>
+        </section>
+      </div>
     )
 }
 
