@@ -131,3 +131,4 @@ dist
 
 # User-defined
 .vscode/
+client/public/output.css

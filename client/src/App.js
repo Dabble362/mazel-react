@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import WelcomeBox from './components/WelcomeBox';
+import LoginBox from './components/LoginBox';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
   return (
     <div className="App">
       <p>{serverResponse}</p>
+      <LoginBox />
       <WelcomeBox />
     </div>
   );
