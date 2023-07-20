@@ -1,27 +1,26 @@
 const LoginBox = () => {
   return (
-    <div class="flex">
-      <section class="xl:flex-1 sm:max-lg:hidden"></section>
-      <section class="flex flex-1 flex-row items-center justify-center w-screen h-screen">
+    <div className="flex">
+      <section className="flex flex-1 flex-row items-center justify-center w-screen h-screen">
         <form action="/login" method="POST"
-          class="flex flex-col bg-white md:shadow-solid-primary md:border-2 md:border-black md:py-6 md:px-4 justify-center items-center mx-auto my-auto p-16">
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="label">
+          className="flex flex-col bg-white md:shadow-solid-primary md:border-2 md:border-black md:py-6 md:px-4 justify-center items-center mx-auto my-auto p-16">
+          <div className="mb-3">
+            <label htmlFor="exampleInputEmail1" className="label">
               <span
-                class="label-text text-dark-slate-gray text-lg font-semibold md:max-xl:backdrop-blur-sm md:max-xl:bg-white/30">Email
+                className="label-text text-dark-slate-gray text-lg font-semibold md:max-xl:backdrop-blur-sm md:max-xl:bg-white/30">Email
                 address</span>
             </label>
-            <input type="email" class="bg-white input input-bordered w-full max-w-xs"
+            <input type="email" className="bg-white input input-bordered w-full max-w-xs"
               id="exampleInputEmail1" aria-describedby="emailHelp" name="email" />
           </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="label">
-              <span class="label-text text-dark-slate-gray text-lg font-semibold">Password</span>
+          <div className="mb-3">
+            <label htmlFor="exampleInputPassword1" className="label">
+              <span className="label-text text-dark-slate-gray text-lg font-semibold">Password</span>
             </label>
-            <input type="password" class="bg-white input input-bordered w-full max-w-xs"
+            <input type="password" className="bg-white input input-bordered w-full max-w-xs"
               id="exampleInputPassword1" name="password" />
           </div>
-          <button type="submit" class="btn btn-outline btn-success lg:max-xl:bg-[#B5CFC8]">
+          <button type="submit" className="btn btn-outline btn-success lg:max-xl:bg-[#B5CFC8]">
             Submit
           </button>
         </form>
