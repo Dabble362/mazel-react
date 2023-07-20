@@ -1,4 +1,4 @@
-const LoginBox = () => {
+const WelcomeBox = () => {
   return (
     <div className="flex">
       <section className="xl:flex-1 sm:max-lg:hidden"></section>
@@ -23,4 +23,4 @@ const LoginBox = () => {
   )
 }
 
-export default LoginBox;
+export default WelcomeBox;
