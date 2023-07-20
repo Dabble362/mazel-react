@@ -5,7 +5,10 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"node server.js\" \"npx tailwindcss -i ./client/src/index.css -o ./client/public/output.css --watch\" \"cd client && react-scripts start\"",
+    "start-express-server": "node server.js",
+    "generate-tailwind-css": "npx tailwindcss -i ./client/src/index.css -o ./client/public/output.css --watch",
+    "start-react-app": "cd client && react-scripts start",
+    "start": "concurrently \"npm run start-express-server\" \"npm run generate-tailwind-css\" \"npm run start-react-app\"",
     "build": "react-scripts build",
     "eject": "react-scripts eject"
   },
