@@ -1,10 +1,11 @@
-// import { useState, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 
 import WelcomeBox from './components/WelcomeBox';
 import LoginBox from './components/LoginBox';
 import SignupBox from './components/SignupBox';
 import PageNotFound404Box from './components/PageNotFound404Box';
+import FeedPage from './components/FeedPage';
 
 function App() {
   // Keeping this here for now as an example of how to talk to the server
@@ -20,6 +21,21 @@ function App() {
   //     })
 
   // }, [])
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLoginSubmission = (loginData) => {
+    if (loginData.email && loginData.password) {
+      console.log("Login form submitted with the following:");
+      Object.entries(loginData).forEach(([key, value]) => {
+        console.log(`${key}: ${value}`);
+      });
+      setIsLoggedIn(true);
+      navigate('/feed');
+    } else {
+      console.log("Login form submitted with invalid (missing) data.");
+    }
+  }
 
   return (
     <div className="App">
@@ -30,11 +46,15 @@ function App() {
         />
         <Route
           path="login"
-          element={<LoginBox />}
+          element={<LoginBox submitFunction={handleLoginSubmission} />}
         />
         <Route
           path="signup"
           element={<SignupBox />}
+        />
+        <Route
+          path="feed"
+          element={<FeedPage />}
         />
         <Route
           path="*"
