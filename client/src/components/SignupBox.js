@@ -1,6 +1,5 @@
 const SignupBox = () => {
   return (
-
     <div class="flex">
       <section class="xl:flex-1 sm:max-lg:hidden"></section>
       <section class="flex flex-1 flex-row items-center justify-center w-screen h-screen">

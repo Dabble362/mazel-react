@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import WelcomeBox from './components/WelcomeBox';
 import LoginBox from './components/LoginBox';
 import SignupBox from './components/SignupBox';
+import PageNotFound404Box from './components/PageNotFound404Box';
 
 function App() {
   // Keeping this here for now as an example of how to talk to the server
@@ -37,7 +38,7 @@ function App() {
         />
         <Route
           path="*"
-          element={<h1>404</h1>} // TODO: replace with actual 404 page
+          element={<PageNotFound404Box />}
         />
       </Routes>
     </div >
