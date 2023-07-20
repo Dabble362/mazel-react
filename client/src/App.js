@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 
+import LoginBox from './components/LoginBox';
+
 function App() {
 
   const [serverResponse, setServerResponse] = useState(null);
@@ -18,6 +20,7 @@ function App() {
   return (
     <div className="App">
       <p>{serverResponse}</p>
+      <LoginBox />
     </div>
   );
 }
